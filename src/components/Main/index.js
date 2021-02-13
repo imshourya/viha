@@ -7,7 +7,8 @@ import {
   Dropdown,
   Divider,
   Button,
-  Message
+  Message,
+  Form
 } from 'semantic-ui-react';
 
 import mindImg from '../../images/mind.svg';
@@ -206,6 +207,19 @@ const Main = ({ startQuiz }) => {
                   onChange={handleTimeChange}
                   disabled={processing}
                 />
+		<br />
+		<Form>
+    		  <Form.Group unstackable widths={2}>
+     			<Form.Input label='First name' placeholder='First name' />
+      			<Form.Input label='Last name' placeholder='Last name' />
+    		  </Form.Group>
+    		  <Form.Group widths={2}>
+      			<Form.Input label= 'Email'placeholder='Email' name='email'/>
+      			<Form.Input label='Phone' placeholder='Phone' />
+    		  </Form.Group>
+    		  <Form.Checkbox label='मैं नियमों और शर्तों से सहमत हूं' />
+    		  <Button type='submit'>Submit</Button>
+               </Form>
               </Item.Meta>
               <Divider />
               <Item.Extra>
